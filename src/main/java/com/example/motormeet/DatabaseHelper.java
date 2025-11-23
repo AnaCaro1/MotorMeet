@@ -11,7 +11,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DBNAME = "MotorMeet.db";
 
     public DatabaseHelper(Context context) {
-        super(context, DBNAME, null, 2);
+        super(context, DBNAME, null, 3);
     }
 
     @Override
@@ -30,12 +30,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "modificado INTEGER, " +
                 "aceita_oferta INTEGER, " +
                 "email_dono TEXT)");
+
+        // --- NOVA TABELA DE EVENTOS ---
+        MyDB.execSQL("create Table events(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "name TEXT, " +
+                "location TEXT, " +
+                "date TEXT, " +
+                "description TEXT, " +
+                "owner_email TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int oldVersion, int newVersion) {
         MyDB.execSQL("drop Table if exists users");
         MyDB.execSQL("drop Table if exists cars");
+        MyDB.execSQL("drop Table if exists events"); // Apaga tabela antiga se existir
         onCreate(MyDB);
     }
 
@@ -123,5 +133,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         long result = MyDB.update("cars", contentValues, "id = ?", new String[]{id});
         return result != -1;
+    }
+
+    // --- NOVOS MÉTODOS PARA EVENTOS ---
+
+    public Boolean addEvent(String name, String location, String date, String description, String ownerEmail){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", name);
+        contentValues.put("location", location);
+        contentValues.put("date", date);
+        contentValues.put("description", description);
+        contentValues.put("owner_email", ownerEmail);
+
+        long result = MyDB.insert("events", null, contentValues);
+        return result != -1;
+    }
+
+    public Cursor getAllEvents(){
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+        // Seleciona todos os eventos, ordenados pelo ID (mais recentes no final, ou use ORDER BY id DESC)
+        return MyDB.rawQuery("Select * from events", null);
     }
 }
