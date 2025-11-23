@@ -155,4 +155,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Seleciona todos os eventos, ordenados pelo ID (mais recentes no final, ou use ORDER BY id DESC)
         return MyDB.rawQuery("Select * from events", null);
     }
+
+    // 1. Buscar dados do usuário logado
+    public Cursor getUserData(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("Select * from users where email = ?", new String[]{email});
+    }
+
+    // 2. Atualizar dados do perfil
+    public Boolean updateUser(String email, String password, String phone, String cpf) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password", password);
+        contentValues.put("phone", phone);
+        contentValues.put("cpf", cpf);
+
+        long result = db.update("users", contentValues, "email = ?", new String[]{email});
+        return result != -1;
+    }
+
+    // 3. Deletar conta (e todos os dados vinculados)
+    public Boolean deleteUser(String email) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Remove carros e eventos desse usuário primeiro
+        db.delete("cars", "email_dono = ?", new String[]{email});
+        db.delete("events", "owner_email = ?", new String[]{email});
+
+        // Remove o usuário
+        long result = db.delete("users", "email = ?", new String[]{email});
+        return result != -1;
+    }
 }

@@ -36,6 +36,12 @@ public class GarageActivity extends AppCompatActivity {
 
         // Botão voltar
         findViewById(R.id.backicon7).setOnClickListener(v -> finish());
+
+        ImageView btnProfile = findViewById(R.id.iconProfile);
+        btnProfile.setOnClickListener(v -> {
+            Intent intent = new Intent(GarageActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override
