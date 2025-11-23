@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/sectionscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/section"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="72dp"
+            android:paddingEnd="32dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="64dp">
+
+            <LinearLayout
+                android:id="@+id/participante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/form_border"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <LinearLayout
+                    android:id="@+id/header2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Novo carro"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="adicione um carro à garagem"
+                            android:textColor="#757575"
+                            android:textSize="16sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button3"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#2c2c2c"
+                    android:fontFamily="sans-serif"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:text="adicionar"
+                    android:textSize="16sp"
+                    android:typeface="normal"
+                    app:cornerRadius="8dp"
+                    app:iconPadding="0dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/header6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/header5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Title3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Suas marcas"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:id="@+id/subtitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="por onde passam..."
+                        android:textColor="#757575"
+                        android:textSize="16sp"
+                        android:typeface="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/containerlabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layouthoroz2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/card4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/date_border"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/audilabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:src="@drawable/audi_logo" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/date_border"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/mercedeslabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:src="@drawable/mercedes_logo" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/date_border"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/jaguarlabel"
+                            android:layout_width="36dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/jaguar_logo" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/date_border"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/bentleylabel"
+                            android:layout_width="49dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/bentley_logo" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/header8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/header7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Title4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Carros populares"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:id="@+id/subtitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="eles são o show!"
+                        android:textColor="#757575"
+                        android:textSize="16sp"
+                        android:typeface="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layouthoroz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/audibadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:src="@drawable/audi_logo" />
+
+                        <ImageView
+                            android:id="@+id/audiimg"
+                            android:layout_width="132dp"
+                            android:layout_height="66dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/audi_a5" />
+
+                        <TextView
+                            android:id="@+id/namecar3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Audi A5"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2022"
+                            android:textAlignment="center"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/mercedeslogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:src="@drawable/mercedes_logo" />
+
+                        <ImageView
+                            android:id="@+id/cclassimg"
+                            android:layout_width="132dp"
+                            android:layout_height="66dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/c_class" />
+
+                        <TextView
+                            android:id="@+id/namecar2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="C class"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2018"
+                            android:textAlignment="center"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/jaguarlogo"
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:src="@drawable/jaguar_logo" />
+
+                        <ImageView
+                            android:id="@+id/spur"
+                            android:layout_width="132dp"
+                            android:layout_height="66dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/spur" />
+
+                        <TextView
+                            android:id="@+id/namecar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="F SPur"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2022"
+                            android:textAlignment="center"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/header8_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/header7_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Title4_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Seus carros expostos"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:id="@+id/subtitle5_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="se é bonito, é pra ser visto!"
+                        android:textColor="#757575"
+                        android:textSize="16sp"
+                        android:typeface="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/carsexposed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card1exposed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_background"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/audiimg1"
+                        android:layout_width="132dp"
+                        android:layout_height="66dp"
+                        android:src="@drawable/audi_a5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/exposedcar1info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/audiimg1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/audibadge1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/audi_logo" />
+
+                        <TextView
+                            android:id="@+id/namecar3_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Audi A5"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2022"
+                            android:textAlignment="viewStart"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/location_filter2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Barueri"
+                        android:textColor="#757575"
+                        app:drawableEndCompat="@drawable/ic_pin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card2exposed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/card_background"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/cclassimg1"
+                        android:layout_width="132dp"
+                        android:layout_height="66dp"
+                        android:src="@drawable/c_class"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/exposedcar2info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cclassimg1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/mercedezbadge1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/mercedes_logo" />
+
+                        <TextView
+                            android:id="@+id/namecar2_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="C class"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano4_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2018"
+                            android:textAlignment="viewStart"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/location_filter3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Alphaville"
+                        android:textColor="#757575"
+                        app:drawableEndCompat="@drawable/ic_pin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card3exposed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_background"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/bentleyimg1"
+                        android:layout_width="132dp"
+                        android:layout_height="66dp"
+                        android:src="@drawable/f_type"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/exposedcar3info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/bentleyimg1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/jaguarbadge"
+                            android:layout_width="36dp"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/jaguar_logo" />
+
+                        <TextView
+                            android:id="@+id/namecar1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="F-type"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2024"
+                            android:textAlignment="viewStart"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/location_filter4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Porto Feliz"
+                        android:textColor="#757575"
+                        app:drawableEndCompat="@drawable/ic_pin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/backicon7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/date_border"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_chevron_left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

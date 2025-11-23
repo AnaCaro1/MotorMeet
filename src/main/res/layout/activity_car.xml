@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/sectionscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/section"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="32dp"
+            android:paddingEnd="32dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="64dp">
+
+            <ImageView
+                android:id="@+id/ferrari2"
+                android:layout_width="347dp"
+                android:layout_height="188dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/audi_a5" />
+
+            <Button
+                android:id="@+id/button"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2c2c2c"
+                android:fontFamily="sans-serif"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="expor carro"
+                android:textSize="16sp"
+                android:typeface="normal"
+                app:cornerRadius="8dp" />
+
+            <LinearLayout
+                android:id="@+id/header2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Sobre o carro"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/location_filter5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_edit"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="editar"
+                    android:textAlignment="textEnd"
+                    android:textColor="#1E1E1E"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/date_filter"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/participante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/form_border"
+                android:paddingStart="32dp"
+                android:paddingLeft="32dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="24dp">
+
+                <LinearLayout
+                    android:id="@+id/infolayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/infolayout2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/participante2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Marca"
+                        android:textAlignment="center"
+                        android:textColor="#757575"
+                        android:textSize="14sp"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:id="@+id/participante1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Audi"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/infolayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/infolayout3"
+                    app:layout_constraintStart_toEndOf="@+id/infolayout1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/labelmodelo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Modelo"
+                        android:textAlignment="center"
+                        android:textColor="#757575"
+                        android:textSize="14sp"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:id="@+id/Modelo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="A5"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/infolayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/infolayout4"
+                    app:layout_constraintStart_toEndOf="@+id/infolayout2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/labelano"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Ano"
+                        android:textAlignment="center"
+                        android:textColor="#757575"
+                        android:textSize="14sp"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:id="@+id/Ano"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="2022"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/infolayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/infolayout3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/labelcambio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Câmbio"
+                        android:textAlignment="center"
+                        android:textColor="#757575"
+                        android:textSize="14sp"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:id="@+id/Cambio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Automático"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/Title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Outros carros"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <HorizontalScrollView
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layouthoroz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/card2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/mercedeslogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:src="@drawable/mercedes_logo" />
+
+                        <ImageView
+                            android:id="@+id/cclassimg"
+                            android:layout_width="132dp"
+                            android:layout_height="66dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/c_class" />
+
+                        <TextView
+                            android:id="@+id/namecar2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="C class"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2018"
+                            android:textAlignment="center"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/jaguarlogo"
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:src="@drawable/jaguar_logo" />
+
+                        <ImageView
+                            android:id="@+id/spur"
+                            android:layout_width="132dp"
+                            android:layout_height="66dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/spur" />
+
+                        <TextView
+                            android:id="@+id/namecar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="F SPur"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2022"
+                            android:textAlignment="center"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/audibadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:src="@drawable/audi_logo" />
+
+                        <ImageView
+                            android:id="@+id/audiimg"
+                            android:layout_width="132dp"
+                            android:layout_height="66dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/audi_a5" />
+
+                        <TextView
+                            android:id="@+id/namecar3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Audi A5"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/ano3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="2022"
+                            android:textAlignment="center"
+                            android:textColor="#757575"
+                            android:textSize="12sp"
+                            android:typeface="normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="excluir"
+                android:textColor="#A50D0D"
+                android:textSize="16sp"
+                android:typeface="normal"
+                app:cornerRadius="8dp"
+                app:strokeColor="#A50D0D" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/date_border"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_chevron_left" />
+
+    <ImageView
+        android:id="@+id/shareicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/date_border"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_share" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

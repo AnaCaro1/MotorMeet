@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MotorMeet</string>
+    <string name="about_the_car">Sobre o carro</string>
+    <string name="subscribe">inscreva-se</string>
+    <string name="oct_3">Out 3</string>
+    <string name="time_19_00">19:00</string>
+    <string name="meeting_of_tuned_cars">Encontro de carrinhos mexidos</string>
+    <string name="address">Av. Santos Dumont, 2241 - Santana, São Paulo - SP, 02012-010</string>
+    <string name="event_description">Descrição do evento</string>
+    <string name="event_details">Prepare-se para um dia inesquecível de velocidade, estilo e paixão automotiva. O Encontro de Carros Esportivos reúne modelos clássicos e supermáquinas atuais em um ambiente vibrante, onde enstusiastas e colecionadores compartilham experiências e histórias sobre o universo dos esportivos. Além da exposição de veículos de alto desempenho, o evento proporciona networking entre amantes de carros, oportunidades de conhecer novas tendências do setor e momentos de pura adrenalina. Seja para exibir o seu carro, participar das atividades ou apenas apreciar de cada detalhe dessas máquinas incríveis, este encontro é feito para quem respira motores e elegância sobre rodas. </string>
+    <string name="share_icon_desc">Share icon</string>
+    <string name="back_icon_desc">Back icon</string>
+    <string name="ferrari_image_desc">Image of a red Ferrari</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="plus_300">+300</string>
+    <string name="subscribers">inscritos</string>
+    <string name="view_all">ver todos</string>
+    <string name="edit">editar</string>
+    <string name="oct_2">Out 2</string>
+    <string name="time_23_00">23:00</string>
+    <string name="meeting_of_modified_cars">Encontro de carros mexidos</string>
+    <string name="cancel">cancelar</string>
+    <string name="mclaren_image_desc">Image of a McLaren</string>
+    <string name="participant_1_avatar_desc">Participant 1 avatar</string>
+    <string name="participant_2_avatar_desc">Participant 2 avatar</string>
+    <string name="participant_3_avatar_desc">Participant 3 avatar</string>
+</resources>
