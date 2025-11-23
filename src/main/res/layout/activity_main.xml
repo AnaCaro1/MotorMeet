@@ -1595,4 +1595,14 @@
         </LinearLayout>
     </ScrollView>
 
+    <ImageView
+        android:id="@+id/iconProfile"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/profile"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

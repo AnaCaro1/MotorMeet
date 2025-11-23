@@ -37,6 +37,7 @@
         <activity android:name=".CarExposeActivity" android:exported="false" />
         <activity android:name=".ContactListActivity" android:exported="false" />
         <activity android:name=".AddInfoActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
     </application>
 
 </manifest>
