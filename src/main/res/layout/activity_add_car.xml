@@ -143,101 +143,41 @@
                         app:layout_constraintTop_toBottomOf="@id/modificado" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:id="@+id/inputform"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/label"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="sans-serif"
-                        android:text="Qual a marca?"
-                        android:textSize="16sp"
-                        android:typeface="normal" />
-
-                    <EditText
-                        android:id="@+id/eventnome"
-                        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edittext_border"
-                        android:drawableEnd="@drawable/ic_chevron_down"
-                        android:fontFamily="sans-serif"
-                        android:hint="Escolha a marca"
-                        android:inputType="phone"
-                        android:paddingStart="16dp"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="12dp"
-                        android:paddingEnd="16dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="12dp" />
-
-                    <TextView
-                        android:id="@+id/label4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif"
-                        android:text="A marca será exibida para quem desejar."
-                        android:textColor="#AA2c2c2c"
-                        android:textSize="14dp"
-                        android:typeface="normal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/inputform1"
+                <AutoCompleteTextView
+                    android:id="@+id/eventnome"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="vertical">
+                    android:background="@drawable/edittext_border"
+                    android:drawableEnd="@drawable/ic_chevron_down"
+                    android:fontFamily="sans-serif"
+                    android:hint="Escolha a marca"
+                    android:inputType="text"
+                    android:popupBackground="@android:color/white"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp" />
 
-                    <TextView
-                        android:id="@+id/label1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="sans-serif"
-                        android:text="Qual o modelo da marca?"
-                        android:textSize="16sp"
-                        android:typeface="normal" />
-
-                    <EditText
-                        android:id="@+id/localevent"
-                        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edittext_border"
-                        android:drawableEnd="@drawable/ic_chevron_down"
-                        android:fontFamily="sans-serif"
-                        android:hint="Escolha o modelo"
-                        android:inputType="phone"
-                        android:paddingStart="16dp"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="12dp"
-                        android:paddingEnd="16dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="12dp" />
-
-                    <TextView
-                        android:id="@+id/label5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif"
-                        android:text="O modelo será exibido para quem desejar."
-                        android:textColor="#AA2c2c2c"
-                        android:textSize="14dp"
-                        android:typeface="normal" />
-
-                </LinearLayout>
+                <AutoCompleteTextView
+                    android:id="@+id/localevent"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_border"
+                    android:drawableEnd="@drawable/ic_chevron_down"
+                    android:fontFamily="sans-serif"
+                    android:hint="Escolha o modelo"
+                    android:inputType="text"
+                    android:popupBackground="@android:color/white"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp" />
 
                 <LinearLayout
                     android:id="@+id/inputform3"

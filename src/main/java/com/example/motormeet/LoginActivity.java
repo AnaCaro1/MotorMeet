@@ -1,6 +1,7 @@
 package com.example.motormeet;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,11 +55,18 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Boolean checkUser = db.checkEmailPassword(email, password);
                     if(checkUser) {
-                        Toast.makeText(LoginActivity.this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                        // Redireciona para a tela principal
+                        Toast.makeText(LoginActivity.this, "Login realizado!", Toast.LENGTH_SHORT).show();
+
+                        // --- SALVAR SESSÃO ---
+                        SharedPreferences sharedPreferences = getSharedPreferences("UserSession", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("email", email); // Salva o email digitado
+                        editor.apply();
+                        // ---------------------
+
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
-                        finish(); // Encerra a tela de login para não voltar nela com 'voltar'
+                        finish();
                     } else {
                         Toast.makeText(LoginActivity.this, "Email ou senha incorretos", Toast.LENGTH_SHORT).show();
                     }
